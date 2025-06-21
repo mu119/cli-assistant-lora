@@ -1,0 +1,614 @@
+[
+  {
+    "question": "How to execute a git subcommand:",
+    "answer": "Use the command: git {{subcommand}}"
+  },
+  {
+    "question": "How to execute a git subcommand on a custom repository root path:",
+    "answer": "Use the command: git -C {{path/to/repo}} {{subcommand}}"
+  },
+  {
+    "question": "How to execute a git subcommand with a given configuration set:",
+    "answer": "Use the command: git -c '{{config.key}}={{value}}' {{subcommand}}"
+  },
+  {
+    "question": "How to display help:",
+    "answer": "Use the command: git {{[-h|--help]}}"
+  },
+  {
+    "question": "How to display help for a specific subcommand (like `clone`, `add`, `push`, `log`, etc.):",
+    "answer": "Use the command: git help {{subcommand}}"
+  },
+  {
+    "question": "How to display version:",
+    "answer": "Use the command: git {{[-v|--version]}}"
+  },
+  {
+    "question": "How to start an interactive shell session:",
+    "answer": "Use the command: bash"
+  },
+  {
+    "question": "How to start an interactive shell session without loading startup configs:",
+    "answer": "Use the command: bash --norc"
+  },
+  {
+    "question": "How to execute specific [c]ommands:",
+    "answer": "Use the command: bash -c \"{{echo 'bash is executed'}}\""
+  },
+  {
+    "question": "How to execute a specific script:",
+    "answer": "Use the command: bash {{path/to/script.sh}}"
+  },
+  {
+    "question": "How to e[x]ecute a specific script, printing each command before executing it:",
+    "answer": "Use the command: bash -x {{path/to/script.sh}}"
+  },
+  {
+    "question": "How to execute a specific script and stop at the first [e]rror:",
+    "answer": "Use the command: bash -e {{path/to/script.sh}}"
+  },
+  {
+    "question": "How to execute specific commands from `stdin`:",
+    "answer": "Use the command: {{echo \"echo 'bash is executed'\"}} | bash"
+  },
+  {
+    "question": "How to start a [r]estricted shell session:",
+    "answer": "Use the command: bash -r"
+  },
+  {
+    "question": "How to [c]reate an archive and write it to a [f]ile:",
+    "answer": "Use the command: tar cf {{path/to/target.tar}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to [c]reate a g[z]ipped archive and write it to a [f]ile:",
+    "answer": "Use the command: tar czf {{path/to/target.tar.gz}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to [c]reate a g[z]ipped (compressed) archive from a directory using relative paths:",
+    "answer": "Use the command: tar czf {{path/to/target.tar.gz}} --directory={{path/to/directory}} ."
+  },
+  {
+    "question": "How to e[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+    "answer": "Use the command: tar xvf {{path/to/source.tar[.gz|.bz2|.xz]}}"
+  },
+  {
+    "question": "How to e[x]tract a (compressed) archive [f]ile into the target directory:",
+    "answer": "Use the command: tar xf {{path/to/source.tar[.gz|.bz2|.xz]}} --directory={{path/to/directory}}"
+  },
+  {
+    "question": "How to [c]reate a compressed archive and write it to a [f]ile, using the file extension to [a]utomatically determine the compression program:",
+    "answer": "Use the command: tar caf {{path/to/target.tar.xz}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to lis[t] the contents of a tar [f]ile [v]erbosely:",
+    "answer": "Use the command: tar tvf {{path/to/source.tar}}"
+  },
+  {
+    "question": "How to e[x]tract files matching a pattern from an archive [f]ile:",
+    "answer": "Use the command: tar xf {{path/to/source.tar}} --wildcards \"{{*.html}}\""
+  },
+  {
+    "question": "How to search for a pattern within a file:",
+    "answer": "Use the command: grep \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "How to search for an exact string (disables regular expressions):",
+    "answer": "Use the command: grep {{[-F|--fixed-strings]}} \"{{exact_string}}\" {{path/to/file}}"
+  },
+  {
+    "question": "How to search for a pattern in all files recursively in a directory, showing line numbers of matches, ignoring binary files:",
+    "answer": "Use the command: grep {{[-r|--recursive]}} {{[-n|--line-number]}} {{[-I|--binary-files=without-match]}} \"{{search_pattern}}\" {{path/to/directory}}"
+  },
+  {
+    "question": "How to use extended regular expressions (supports `?`, `+`, `{}`, `()`, and `|`), in case-insensitive mode:",
+    "answer": "Use the command: grep {{[-E|--extended-regexp]}} {{[-i|--ignore-case]}} \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "How to print 3 lines of [c]ontext around, [b]efore or [a]fter each match:",
+    "answer": "Use the command: grep --{{context|before-context|after-context}} 3 \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "How to print file name and line number for each match with color output:",
+    "answer": "Use the command: grep {{[-H|--with-filename]}} {{[-n|--line-number]}} --color=always \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "How to search for lines matching a pattern, printing only the matched text:",
+    "answer": "Use the command: grep {{[-o|--only-matching]}} \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "question": "How to search `stdin` for lines that do not match a pattern:",
+    "answer": "Use the command: cat {{path/to/file}} | grep {{[-v|--invert-match]}} \"{{search_pattern}}\""
+  },
+  {
+    "question": "How to start a repl (interactive shell):",
+    "answer": "Use the command: python"
+  },
+  {
+    "question": "How to execute a specific python file:",
+    "answer": "Use the command: python {{path/to/file.py}}"
+  },
+  {
+    "question": "How to execute a specific python file and start a repl:",
+    "answer": "Use the command: python -i {{path/to/file.py}}"
+  },
+  {
+    "question": "How to execute a python expression:",
+    "answer": "Use the command: python -c \"{{expression}}\""
+  },
+  {
+    "question": "How to run the script of the specified library module:",
+    "answer": "Use the command: python -m {{module}} {{arguments}}"
+  },
+  {
+    "question": "How to install a package using `pip`:",
+    "answer": "Use the command: python -m pip install {{package}}"
+  },
+  {
+    "question": "How to interactively debug a python script:",
+    "answer": "Use the command: python -m pdb {{path/to/file.py}}"
+  },
+  {
+    "question": "How to start the built-in http server on port 8000 in the current directory:",
+    "answer": "Use the command: python -m http.server"
+  },
+  {
+    "question": "How to create a `package.json` file with default values (omit `--yes` to do it interactively):",
+    "answer": "Use the command: npm init {{[-y|--yes]}}"
+  },
+  {
+    "question": "How to download all the packages listed as dependencies in `package.json`:",
+    "answer": "Use the command: npm install"
+  },
+  {
+    "question": "How to download a specific version of a package and add it to the list of dependencies in `package.json`:",
+    "answer": "Use the command: npm install {{package_name}}@{{version}}"
+  },
+  {
+    "question": "How to download the latest version of a package and add it to the list of dev dependencies in `package.json`:",
+    "answer": "Use the command: npm install {{package_name}} {{[-D|--save-dev]}}"
+  },
+  {
+    "question": "How to download the latest version of a package and install it globally:",
+    "answer": "Use the command: npm install {{[-g|--global]}} {{package_name}}"
+  },
+  {
+    "question": "How to uninstall a package and remove it from the list of dependencies in `package.json`:",
+    "answer": "Use the command: npm uninstall {{package_name}}"
+  },
+  {
+    "question": "How to list all locally installed dependencies:",
+    "answer": "Use the command: npm list"
+  },
+  {
+    "question": "How to list all top-level globally installed packages:",
+    "answer": "Use the command: npm list {{[-g|--global]}} --depth {{0}}"
+  },
+  {
+    "question": "How to give the [u]ser who owns a file the right to e[x]ecute it:",
+    "answer": "Use the command: chmod u+x {{path/to/file}}"
+  },
+  {
+    "question": "How to give the [u]ser rights to [r]ead and [w]rite to a file/directory:",
+    "answer": "Use the command: chmod u+rw {{path/to/file_or_directory}}"
+  },
+  {
+    "question": "How to remove e[x]ecutable rights from the [g]roup:",
+    "answer": "Use the command: chmod g-x {{path/to/file}}"
+  },
+  {
+    "question": "How to give [a]ll users rights to [r]ead and e[x]ecute:",
+    "answer": "Use the command: chmod a+rx {{path/to/file}}"
+  },
+  {
+    "question": "How to give [o]thers (not in the file owner's group) the same rights as the [g]roup:",
+    "answer": "Use the command: chmod o=g {{path/to/file}}"
+  },
+  {
+    "question": "How to remove all rights from [o]thers:",
+    "answer": "Use the command: chmod o= {{path/to/file}}"
+  },
+  {
+    "question": "How to change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:",
+    "answer": "Use the command: chmod {{[-R|--recursive]}} g+w,o+w {{path/to/directory}}"
+  },
+  {
+    "question": "How to recursively give [a]ll users [r]ead permissions to files and e[x]ecute permissions to sub-directories within a directory:",
+    "answer": "Use the command: chmod {{[-R|--recursive]}} a+rX {{path/to/directory}}"
+  },
+  {
+    "question": "How to find files by extension:",
+    "answer": "Use the command: find {{root_path}} -name '{{*.ext}}'"
+  },
+  {
+    "question": "How to find files matching multiple path/name patterns:",
+    "answer": "Use the command: find {{root_path}} -path '{{*/path/*/*.ext}}' -or -name '{{*pattern*}}'"
+  },
+  {
+    "question": "How to find directories matching a given name, in case-insensitive mode:",
+    "answer": "Use the command: find {{root_path}} -type d -iname '{{*lib*}}'"
+  },
+  {
+    "question": "How to find files matching a given pattern, excluding specific paths:",
+    "answer": "Use the command: find {{root_path}} -name '{{*.py}}' -not -path '{{*/site-packages/*}}'"
+  },
+  {
+    "question": "How to find files matching a given size range, limiting the recursive depth to \"1\":",
+    "answer": "Use the command: find {{root_path}} -maxdepth 1 -size {{+500k}} -size {{-10M}}"
+  },
+  {
+    "question": "How to run a command for each file (use `{}` within the command to access the filename):",
+    "answer": "Use the command: find {{root_path}} -name '{{*.ext}}' -exec {{wc -l}} {} \\;"
+  },
+  {
+    "question": "How to find all files modified today and pass the results to a single command as arguments:",
+    "answer": "Use the command: find {{root_path}} -daystart -mtime {{-1}} -exec {{tar -cvf archive.tar}} {} \\+"
+  },
+  {
+    "question": "How to search for either empty files or directories and delete them verbosely:",
+    "answer": "Use the command: find {{root_path}} -type {{f|d}} -empty -delete -print"
+  },
+  {
+    "question": "How to make an http get request and dump the contents in `stdout`:",
+    "answer": "Use the command: curl {{https://example.com}}"
+  },
+  {
+    "question": "How to make an http get request, follow any `3xx` redirects, and dump the reply headers and contents to `stdout`:",
+    "answer": "Use the command: curl {{[-L|--location]}} {{[-D|--dump-header]}} - {{https://example.com}}"
+  },
+  {
+    "question": "How to download a file, saving the output under the filename indicated by the url:",
+    "answer": "Use the command: curl {{[-O|--remote-name]}} {{https://example.com/filename.zip}}"
+  },
+  {
+    "question": "How to send form-encoded data (post request of type `application/x-www-form-urlencoded`). use `--data @file_name` or `--data @'-'` to read from `stdin`:",
+    "answer": "Use the command: curl {{[-X|--request]}} POST {{[-d|--data]}} {{'name=bob'}} {{http://example.com/form}}"
+  },
+  {
+    "question": "How to send a request with an extra header, using a custom http method and over a proxy (such as burpsuite), ignoring insecure self-signed certificates:",
+    "answer": "Use the command: curl {{[-k|--insecure]}} {{[-x|--proxy]}} {{http://127.0.0.1:8080}} {{[-H|--header]}} {{'Authorization: Bearer token'}} {{[-X|--request]}} {{GET|PUT|POST|DELETE|PATCH|...}} {{https://example.com}}"
+  },
+  {
+    "question": "How to send data in json format, specifying the appropriate content-type header:",
+    "answer": "Use the command: curl {{[-d|--data]}} {{'{\"name\":\"bob\"}'}} {{[-H|--header]}} {{'Content-Type: application/json'}} {{http://example.com/users/1234}}"
+  },
+  {
+    "question": "How to pass client certificate and key for a resource, skipping certificate validation:",
+    "answer": "Use the command: curl {{[-E|--cert]}} {{client.pem}} --key {{key.pem}} {{[-k|--insecure]}} {{https://example.com}}"
+  },
+  {
+    "question": "How to resolve a hostname to a custom ip address, with verbose output (similar to editing the `/etc/hosts` file for custom dns resolution):",
+    "answer": "Use the command: curl {{[-v|--verbose]}} --resolve {{example.com}}:{{80}}:{{127.0.0.1}} {{http://example.com}}"
+  },
+  {
+    "question": "How to list files one per line:",
+    "answer": "Use the command: ls -1"
+  },
+  {
+    "question": "How to list all files, including hidden files:",
+    "answer": "Use the command: ls {{[-a|--all]}}"
+  },
+  {
+    "question": "How to list files with a trailing symbol to indicate file type (directory/, symbolic_link@, executable*, ...):",
+    "answer": "Use the command: ls {{[-F|--classify]}}"
+  },
+  {
+    "question": "How to list all files in [l]ong format (permissions, ownership, size, and modification date):",
+    "answer": "Use the command: ls {{[-la|-l --all]}}"
+  },
+  {
+    "question": "How to list files in [l]ong format with size displayed using human-readable units (kib, mib, gib):",
+    "answer": "Use the command: ls {{[-lh|-l --human-readable]}}"
+  },
+  {
+    "question": "How to list files in [l]ong format, sorted by [s]ize (descending) recursively:",
+    "answer": "Use the command: ls {{[-lSR|-lS --recursive]}}"
+  },
+  {
+    "question": "How to list files in [l]ong format, sorted by [t]ime the file was modified and in reverse order (oldest first):",
+    "answer": "Use the command: ls {{[-ltr|-lt --reverse]}}"
+  },
+  {
+    "question": "How to only list directories:",
+    "answer": "Use the command: ls {{[-d|--directory]}} */"
+  },
+  {
+    "question": "How to go to the specified directory:",
+    "answer": "Use the command: cd {{path/to/directory}}"
+  },
+  {
+    "question": "How to go up to the parent of the current directory:",
+    "answer": "Use the command: cd .."
+  },
+  {
+    "question": "How to go to the home directory of the current user:",
+    "answer": "Use the command: cd"
+  },
+  {
+    "question": "How to go to the home directory of the specified user:",
+    "answer": "Use the command: cd ~{{username}}"
+  },
+  {
+    "question": "How to go to the previously chosen directory:",
+    "answer": "Use the command: cd -"
+  },
+  {
+    "question": "How to go to the root directory:",
+    "answer": "Use the command: cd /"
+  },
+  {
+    "question": "How to rename a file or directory when the target is not an existing directory:",
+    "answer": "Use the command: mv {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "question": "How to move a file or directory into an existing directory:",
+    "answer": "Use the command: mv {{path/to/source}} {{path/to/existing_directory}}"
+  },
+  {
+    "question": "How to move multiple files into an existing directory, keeping the filenames unchanged:",
+    "answer": "Use the command: mv {{path/to/source1 path/to/source2 ...}} {{path/to/existing_directory}}"
+  },
+  {
+    "question": "How to do not prompt for confirmation before overwriting existing files:",
+    "answer": "Use the command: mv {{[-f|--force]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "question": "How to prompt for confirmation interactively before overwriting existing files, regardless of file permissions:",
+    "answer": "Use the command: mv {{[-i|--interactive]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "question": "How to do not overwrite existing files at the target:",
+    "answer": "Use the command: mv {{[-n|--no-clobber]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "question": "How to move files in verbose mode, showing files after they are moved:",
+    "answer": "Use the command: mv {{[-v|--verbose]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "question": "How to specify target directory so that you can use external tools to gather movable files:",
+    "answer": "Use the command: {{find /var/log -type f -name '*.log' -print0}} | {{xargs -0}} mv {{[-t|--target-directory]}} {{path/to/target_directory}}"
+  },
+  {
+    "question": "How to copy a file to another location:",
+    "answer": "Use the command: cp {{path/to/source_file.ext}} {{path/to/target_file.ext}}"
+  },
+  {
+    "question": "How to copy a file into another directory, keeping the filename:",
+    "answer": "Use the command: cp {{path/to/source_file.ext}} {{path/to/target_parent_directory}}"
+  },
+  {
+    "question": "How to recursively copy a directory's contents to another location (if the destination exists, the directory is copied inside it):",
+    "answer": "Use the command: cp {{[-r|--recursive]}} {{path/to/source_directory}} {{path/to/target_directory}}"
+  },
+  {
+    "question": "How to copy a directory recursively, in verbose mode (shows files as they are copied):",
+    "answer": "Use the command: cp {{[-vr|--verbose --recursive]}} {{path/to/source_directory}} {{path/to/target_directory}}"
+  },
+  {
+    "question": "How to copy multiple files at once to a directory:",
+    "answer": "Use the command: cp {{[-t|--target-directory]}} {{path/to/destination_directory}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to copy all files with a specific extension to another location, in interactive mode (prompts user before overwriting):",
+    "answer": "Use the command: cp {{[-i|--interactive]}} {{*.ext}} {{path/to/target_directory}}"
+  },
+  {
+    "question": "How to follow symbolic links before copying:",
+    "answer": "Use the command: cp {{[-L|--dereference]}} {{link}} {{path/to/target_directory}}"
+  },
+  {
+    "question": "How to use the full path of source files, creating any missing intermediate directories when copying:",
+    "answer": "Use the command: cp --parents {{source/path/to/file}} {{path/to/target_file}}"
+  },
+  {
+    "question": "How to remove specific files:",
+    "answer": "Use the command: rm {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to remove specific files ignoring nonexistent ones:",
+    "answer": "Use the command: rm {{[-f|--force]}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to remove specific files interactively prompting before each removal:",
+    "answer": "Use the command: rm {{[-i|--interactive]}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to remove specific files printing info about each removal:",
+    "answer": "Use the command: rm {{[-v|--verbose]}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to remove specific files and directories recursively:",
+    "answer": "Use the command: rm {{[-r|--recursive]}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}"
+  },
+  {
+    "question": "How to remove empty directories (this is considered the safe method):",
+    "answer": "Use the command: rm {{[-d|--dir]}} {{path/to/directory}}"
+  },
+  {
+    "question": "How to create specific directories:",
+    "answer": "Use the command: mkdir {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "question": "How to create specific directories and their parents if needed:",
+    "answer": "Use the command: mkdir {{[-p|--parents]}} {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "question": "How to create directories with specific permissions:",
+    "answer": "Use the command: mkdir {{[-m|--mode]}} {{rwxrw-r--}} {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "question": "How to print the contents of a file to `stdout`:",
+    "answer": "Use the command: cat {{path/to/file}}"
+  },
+  {
+    "question": "How to concatenate several files into an output file:",
+    "answer": "Use the command: cat {{path/to/file1 path/to/file2 ...}} > {{path/to/output_file}}"
+  },
+  {
+    "question": "How to append several files to an output file:",
+    "answer": "Use the command: cat {{path/to/file1 path/to/file2 ...}} >> {{path/to/output_file}}"
+  },
+  {
+    "question": "How to copy the contents of a file into an output file without buffering:",
+    "answer": "Use the command: cat -u {{/dev/tty12}} > {{/dev/tty13}}"
+  },
+  {
+    "question": "How to write `stdin` to a file:",
+    "answer": "Use the command: cat - > {{path/to/file}}"
+  },
+  {
+    "question": "How to output the first few lines of a file:",
+    "answer": "Use the command: head -n {{count}} {{path/to/file}}"
+  },
+  {
+    "question": "How to show last 'count' lines in file:",
+    "answer": "Use the command: tail {{[-n|--lines]}} {{count}} {{path/to/file}}"
+  },
+  {
+    "question": "How to print a file from a specific line number:",
+    "answer": "Use the command: tail {{[-n|--lines]}} +{{count}} {{path/to/file}}"
+  },
+  {
+    "question": "How to print a specific count of bytes from the end of a given file:",
+    "answer": "Use the command: tail {{[-c|--bytes]}} {{count}} {{path/to/file}}"
+  },
+  {
+    "question": "How to print the last lines of a given file and keep reading it until `<ctrl c>`:",
+    "answer": "Use the command: tail {{[-f|--follow]}} {{path/to/file}}"
+  },
+  {
+    "question": "How to keep reading file until `<ctrl c>`, even if the file is inaccessible:",
+    "answer": "Use the command: tail {{[-F|--retry --follow]}} {{path/to/file}}"
+  },
+  {
+    "question": "How to show last 'num' lines in 'file' and refresh every 'n' seconds:",
+    "answer": "Use the command: tail {{[-n|--lines]}} {{count}} {{[-s|--sleep-interval]}} {{seconds}} {{[-f|--follow]}} {{path/to/file}}"
+  },
+  {
+    "question": "How to create specific files:",
+    "answer": "Use the command: touch {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to set the file [a]ccess or [m]odification times to the current one and don't create file if it doesn't exist:",
+    "answer": "Use the command: touch {{[-c|--no-create]}} -{{a|m}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to set the file [t]ime to a specific value and don't create file if it doesn't exist:",
+    "answer": "Use the command: touch {{[-c|--no-create]}} -t {{YYYYMMDDHHMM.SS}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to set the files' timestamp to the reference file's timestamp, and do not create the file if it does not exist:",
+    "answer": "Use the command: touch {{[-c|--no-create]}} {{[-r|--reference]}} {{path/to/reference_file}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "question": "How to set the timestamp by parsing a string:",
+    "answer": "Use the command: touch {{[-d|--date]}} \"{{last year|5 hours|next thursday|nov 14|...}}\" {{path/to/file}}"
+  },
+  {
+    "question": "How to list all running processes:",
+    "answer": "Use the command: ps aux"
+  },
+  {
+    "question": "How to list all running processes including the full command string:",
+    "answer": "Use the command: ps auxww"
+  },
+  {
+    "question": "How to search for a process that matches a string (the brackets will prevent `grep` from matching itself):",
+    "answer": "Use the command: ps aux | grep {{[s]tring}}"
+  },
+  {
+    "question": "How to list all processes of the current user in extra full format:",
+    "answer": "Use the command: ps {{[-u|--user]}} $(id {{[-u|--user]}}) -F"
+  },
+  {
+    "question": "How to list all processes of the current user as a tree:",
+    "answer": "Use the command: ps {{[-u|--user]}} $(id {{[-u|--user]}}) f"
+  },
+  {
+    "question": "How to get the parent pid of a process:",
+    "answer": "Use the command: ps {{[-o|--format]}} ppid= {{[-p|--pid]}} {{pid}}"
+  },
+  {
+    "question": "How to sort processes by memory consumption:",
+    "answer": "Use the command: ps {{[k|--sort]}} size"
+  },
+  {
+    "question": "How to print the current date and time in Linux?",
+    "answer": "Use the command: date"
+  },
+  {
+    "question": "How to make a shell script executable?",
+    "answer": "Use the command: chmod +x script.sh"
+  },
+  {
+    "question": "How to view disk usage of the current directory?",
+    "answer": "Use the command: du -sh ."
+  },
+  {
+    "question": "How to list files sorted by size?",
+    "answer": "Use the command: ls -lhS"
+  },
+  {
+    "question": "How to see hidden files in a directory?",
+    "answer": "Use the command: ls -a"
+  },
+  {
+    "question": "How to view the last 20 lines of a file?",
+    "answer": "Use the command: tail -n 20 filename"
+  },
+  {
+    "question": "How to copy a directory recursively?",
+    "answer": "Use the command: cp -r source_dir target_dir"
+  },
+  {
+    "question": "How to find the current shell you are using?",
+    "answer": "Use the command: echo $SHELL"
+  },
+  {
+    "question": "How to download a file using curl?",
+    "answer": "Use the command: curl -O https://example.com/file.txt"
+  },
+  {
+    "question": "How to display running processes in tree format?",
+    "answer": "Use the command: pstree"
+  },
+  {
+    "question": "How to compress a file using gzip?",
+    "answer": "Use the command: gzip filename"
+  },
+  {
+    "question": "How to extract a .tar.gz archive?",
+    "answer": "Use the command: tar -xzf archive.tar.gz"
+  },
+  {
+    "question": "How to show system uptime?",
+    "answer": "Use the command: uptime"
+  },
+  {
+    "question": "How to show memory usage in human-readable format?",
+    "answer": "Use the command: free -h"
+  },
+  {
+    "question": "How to view environment variables?",
+    "answer": "Use the command: printenv"
+  },
+  {
+    "question": "How to search for a file by name in a directory?",
+    "answer": "Use the command: find . -name filename"
+  },
+  {
+    "question": "How to compare two files line by line?",
+    "answer": "Use the command: diff file1.txt file2.txt"
+  },
+  {
+    "question": "How to create an empty file?",
+    "answer": "Use the command: touch filename"
+  },
+  {
+    "question": "How to archive multiple files into a .tar file?",
+    "answer": "Use the command: tar -cf archive.tar file1 file2"
+  },
+  {
+    "question": "How to exit the terminal?",
+    "answer": "Use the command: exit"
+  }
+]
